@@ -1,14 +1,8 @@
 import SkillList from "./SkillList";
 import LinkList from "./LinkList";
+import { ProjectType } from "@/data/types";
 
-interface ProjectItemProps {
-  title: string;
-  description: string;
-  skills?: string[];
-  links?: { href: string; src: string; alt: string; width: number; height: number }[];
-}
-
-export default function ProjectItem({ title, description, skills = [], links = [] }: ProjectItemProps) {
+export default function ProjectItem({ title, description, skills = [], links = [] }: ProjectType) {
   return (
     <li className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-gray-800 hover:dark:bg-gray-800/30 my-4">
       <h3 className="mb-2 font-semibold group-hover:text-cyan-300">

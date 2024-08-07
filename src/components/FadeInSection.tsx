@@ -8,7 +8,7 @@ interface FadeInSectionProps {
   children: ReactNode;
 }
 
-const FadeInSection: React.FC<FadeInSectionProps> = ({ children }) => {
+export default function FadeInSection({ children }: FadeInSectionProps) {
   const controls = useAnimation();
   const [ref, inView] = useInView({
     triggerOnce: false,
@@ -32,12 +32,10 @@ const FadeInSection: React.FC<FadeInSectionProps> = ({ children }) => {
         visible: { opacity: 1, y: 0 },
         hidden: { opacity: 0, y: -50 },
       }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.6 }}
       style={{ width: "100%" }}
     >
       {children}
     </motion.div>
   );
-};
-
-export default FadeInSection;
+}

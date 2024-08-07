@@ -1,9 +1,6 @@
-import { Merienda } from "next/font/google";
 import Logo from "./Logo";
 import DarkModeButton from "./DarkModeButton";
 import Navigation from "./Navigation";
-
-const merienda = Merienda({ subsets: ["latin"], weight: ["300", "400", "500", "600", "700", "800", "900"] });
 
 export default function Header() {
   return (

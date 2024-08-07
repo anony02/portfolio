@@ -1,14 +1,8 @@
 import ProjectItem from "./ProjectItem";
-
-interface Project {
-  title: string;
-  description: string;
-  skills?: string[];
-  links?: { href: string; src: string; alt: string; width: number; height: number }[];
-}
+import { ProjectType } from "@/data/types";
 
 interface ProjectsSectionProps {
-  projects: Project[];
+  projects: ProjectType[];
 }
 
 export default function ProjectsSection({ projects }: ProjectsSectionProps) {

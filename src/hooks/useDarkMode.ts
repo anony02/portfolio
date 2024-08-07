@@ -1,7 +1,12 @@
 import { useState, useEffect } from "react";
 
-export default function useDarkMode() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
+interface UseDarkModeReturn {
+  isDarkMode: boolean;
+  toggleDarkMode: () => void;
+}
+
+export default function useDarkMode(): UseDarkModeReturn {
+  const [isDarkMode, setIsDarkMode] = useState<boolean>(false);
 
   useEffect(() => {
     const savedMode = localStorage.getItem("dark-mode") === "true";

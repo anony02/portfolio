@@ -1,9 +1,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import nextConfig from "../../next.config.mjs";
+import { LinkType } from "@/data/types";
 
 interface LinkListProps {
-  links: { href: string; src: string; alt: string; width: number; height: number }[];
+  links: LinkType[];
 }
 
 export default function LinkList({ links }: LinkListProps) {
@@ -14,7 +15,7 @@ export default function LinkList({ links }: LinkListProps) {
           key={link.alt}
           className="mr-1.5 mt-2 p-2 dark:drop-shadow-[0_0_5px_#ffffffff] transition-transform transform hover:scale-150"
         >
-          <Link href={link.href} target="_blank">
+          <Link href={link.href} target="_blank" rel="noopener noreferrer">
             <Image src={`${nextConfig.basePath}${link.src}`} alt={link.alt} width={link.width} height={link.height} />
           </Link>
         </li>
