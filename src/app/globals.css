@@ -18,7 +18,7 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background: rgb(var(--background-start-rgb));
   transition: color var(--transition-duration), background var(--transition-duration);
   @apply flex justify-center items-center min-h-screen;
 }
@@ -43,15 +43,15 @@ section {
 }
 
 section#aboutme {
-  background-color: rgb(245, 255, 245);
+  background-color: rgba(245, 255, 245, 0.5);
 }
 
 section#skills {
-  background-color: rgb(245, 245, 255);
+  background-color: rgba(245, 245, 255, 0.5);
 }
 
 section#projects {
-  background-color: rgb(255, 245, 245);
+  background-color: rgba(255, 245, 245, 0.5);
 }
 
 .dark section {
@@ -60,15 +60,15 @@ section#projects {
 }
 
 .dark section#aboutme {
-  background-color: rgb(20, 30, 20);
+  background-color: rgba(20, 30, 20, 0.5);
 }
 
 .dark section#skills {
-  background-color: rgb(20, 20, 30);
+  background-color: rgba(20, 20, 30, 0.5);
 }
 
 .dark section#projects {
-  background-color: rgb(30, 20, 20);
+  background-color: rgba(30, 20, 20, 0.5);
 }
 
 .icon-hover-effect path {

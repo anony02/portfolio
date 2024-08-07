@@ -15,7 +15,7 @@ export default function ProjectsSection({ projects }: ProjectsSectionProps) {
   return (
     <section id="projects">
       <h2 className="mb-2 text-2xl font-bold">Projects</h2>
-      <ol className="grid lg:w-full lg:max-w-5xl lg:grid-cols-3 lg:text-left">
+      <ol className="flex flex-col">
         {projects.map((project, i) => (
           <ProjectItem key={i} {...project} />
         ))}
