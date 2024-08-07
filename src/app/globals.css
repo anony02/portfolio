@@ -11,7 +11,7 @@
 }
 
 .dark {
-  --foreground-rgb: 224, 224, 224;
+  --foreground-rgb: 200, 200, 200;
   --background-start-rgb: 30, 30, 30;
   --background-end-rgb: 30, 30, 30;
 }
@@ -21,12 +21,6 @@ body {
   background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
   transition: color var(--transition-duration), background var(--transition-duration);
   @apply flex justify-center items-center min-h-screen;
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
 }
 
 ul,
@@ -66,15 +60,15 @@ section#projects {
 }
 
 .dark section#aboutme {
-  background-color: rgb(40, 40, 40);
+  background-color: rgb(20, 30, 20);
 }
 
 .dark section#skills {
-  background-color: rgb(50, 50, 60);
+  background-color: rgb(20, 20, 30);
 }
 
 .dark section#projects {
-  background-color: rgb(40, 40, 40);
+  background-color: rgb(30, 20, 20);
 }
 
 .icon-hover-effect path {

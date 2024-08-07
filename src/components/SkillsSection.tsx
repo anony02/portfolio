@@ -10,7 +10,7 @@ export default function SkillsSection() {
         {skills.map((skill) => (
           <li key={skill.alt} className="mr-1.5 mt-2">
             <Image
-              className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
+              className="mr-1.5 mt-2 p-2 dark:drop-shadow-[0_0_10px_#ffffff50]"
               src={`${nextConfig.basePath}${skill.src}`}
               alt={`${skill.alt} Logo`}
               width={skill.width}
