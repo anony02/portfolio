@@ -18,6 +18,8 @@
 - 특정 section으로 이동하는 navigation bar
 - hover 시 효과
 - 스크롤 시 효과
+- 마우스 커서 이펙트
+- 모달 구현
 
 ## 설치
 
