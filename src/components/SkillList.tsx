@@ -4,7 +4,7 @@ interface SkillListProps {
 
 export default function SkillList({ skills }: SkillListProps) {
   return (
-    <ul className="flex">
+    <ul className="flex flex-wrap">
       {skills.map((skill) => (
         <li
           key={skill}

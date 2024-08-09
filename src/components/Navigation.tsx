@@ -13,7 +13,7 @@ export default function Navigation() {
     >
       <ul className="flex justify-center space-x-8 mt-8 mb-8 lg:m-0 lg:flex-col lg:space-y-8 lg:space-x-0">
         {menus.map((menu) => (
-          <li key={menu}>
+          <li key={menu} className="inline-block w-fit">
             <button className="flex place-items-center gap-2 p-0 font-bold" onClick={(e) => handleMenuClick(e, menu)}>
               {menu}
             </button>
