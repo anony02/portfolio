@@ -9,7 +9,7 @@ export default function DarkModeButton() {
   return (
     <button onClick={toggleDarkMode} className="p-2">
       <div className="icon-hover-effect">
-        {isDarkMode ? <SunIcon className="h-6 w-6" /> : <MoonIcon className="h-6 w-6 dark:text-gray-200" />}
+        {isDarkMode ? <SunIcon className="h-10 w-10" /> : <MoonIcon className="h-10 w-10" />}
       </div>
     </button>
   );

@@ -38,7 +38,9 @@ export default function MouseEffect() {
   }, []);
 
   return (
-    <div style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", pointerEvents: "none" }}>
+    <div
+      style={{ position: "fixed", top: 0, left: 0, width: "100%", height: "100%", pointerEvents: "none", zIndex: 99 }}
+    >
       <AnimatePresence>
         {sparkles.map(({ id, x, y, size, color }) => (
           <motion.div
@@ -63,47 +65,3 @@ export default function MouseEffect() {
     </div>
   );
 }
-
-// "use client";
-
-// import { useEffect, useState } from "react";
-// import { motion } from "framer-motion";
-
-// interface MousePosition {
-//   x: number;
-//   y: number;
-// }
-
-// export default function MouseEffect() {
-//   const [mousePosition, setMousePosition] = useState<MousePosition>({ x: 0, y: 0 });
-
-//   const handleMouseMove = (event: MouseEvent) => {
-//     setMousePosition({ x: event.clientX, y: event.clientY });
-//   };
-
-//   useEffect(() => {
-//     window.addEventListener("mousemove", handleMouseMove);
-//     return () => {
-//       window.removeEventListener("mousemove", handleMouseMove);
-//     };
-//   }, []);
-
-//   const gradient = `radial-gradient(circle 50px at ${mousePosition.x}px ${mousePosition.y}px, rgba(255, 255, 255, 0.1), transparent 100%)`;
-
-//   return (
-//     <motion.div
-//       className="mouse-effect"
-//       style={{
-//         position: "fixed",
-//         top: 0,
-//         left: 0,
-//         width: "100%",
-//         height: "100%",
-//         pointerEvents: "none",
-//         background: gradient,
-//         zIndex: 1,
-//         mixBlendMode: "difference",
-//       }}
-//     />
-//   );
-// }

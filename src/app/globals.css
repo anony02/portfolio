@@ -4,21 +4,19 @@
 @tailwind utilities;
 
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --foreground-hex: #111111;
+  --background-hex: #eeeeee;
   --transition-duration: 0.5s;
 }
 
 .dark {
-  --foreground-rgb: 200, 200, 200;
-  --background-start-rgb: 30, 30, 30;
-  --background-end-rgb: 30, 30, 30;
+  --foreground-hex: #eeeeee;
+  --background-hex: #111111;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-start-rgb));
+  color: var(--foreground-hex);
+  background: var(--background-hex);
   transition: color var(--transition-duration), background var(--transition-duration);
   @apply flex justify-center items-center min-h-screen;
 }
@@ -33,42 +31,17 @@ h2 {
 }
 
 section {
-  border: 1px solid rgb(204, 204, 204);
   border-radius: 0.5rem;
   padding: 2rem;
   width: 100%;
   min-height: 16rem;
-  box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.2);
-  color: rgb(var(--foreground-rgb));
-}
-
-section#aboutme {
-  background-color: rgba(245, 255, 245, 0.5);
-}
-
-section#skills {
-  background-color: rgba(245, 245, 255, 0.5);
-}
-
-section#projects {
-  background-color: rgba(255, 245, 245, 0.5);
+  box-shadow: 0 0 6px 1px #dddddd;
+  background-color: #ffffff;
 }
 
 .dark section {
-  border: 1px solid rgb(52, 52, 52);
-  box-shadow: 0 0 6px 1px rgba(256, 256, 256, 0.2);
-}
-
-.dark section#aboutme {
-  background-color: rgba(20, 30, 20, 0.5);
-}
-
-.dark section#skills {
-  background-color: rgba(20, 20, 30, 0.5);
-}
-
-.dark section#projects {
-  background-color: rgba(30, 20, 20, 0.5);
+  box-shadow: 0 0 6px 1px #000000;
+  background-color: #222222;
 }
 
 .icon-hover-effect path {
@@ -92,7 +65,7 @@ nav ul li::before {
   left: 0;
   width: 100%;
   height: 0.5rem;
-  background: rgba(255, 255, 0, 0.6);
+  background: rgba(255, 255, 0, 0.5);
   transform: scaleX(0);
   transform-origin: left;
   transition: transform 0.3s ease;
@@ -117,4 +90,17 @@ nav ul li:hover::before {
 
 .animate-blink {
   animation: blink 1s step-start infinite;
+}
+
+body.modal-open {
+  overflow: hidden;
+}
+
+h4 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-style: italic;
+  text-decoration-line: underline;
 }
