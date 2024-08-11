@@ -51,11 +51,18 @@ export default function ProjectDetails({ project }: ProjectDetailsProps) {
       </p>
       <p>
         <h4>Process</h4>
-        <span>{project.details.developmentProcess}</span>
+        {project.details.process.map((li, i) => {
+          const [boldText, normalText] = li.split(":");
+          return (
+            <li key={i} className="list-disc">
+              <span className="font-bold">{boldText}</span>:{normalText}
+            </li>
+          );
+        })}
       </p>
       <p>
         <h4>Contribution</h4>
-        <span>{project.details.roleAndContribution}</span>
+        <span>{project.details.contribution}</span>
       </p>
       <p>
         <h4>Result</h4>

@@ -9,8 +9,8 @@ export interface LinkType {
 export interface DetailType {
   background: string;
   features: string[];
-  developmentProcess: string;
-  roleAndContribution: string;
+  process: string[];
+  contribution: string;
   result: string;
   improvements: string;
 }
