@@ -6,8 +6,8 @@ import MouseEffect from "@/components/MouseEffect";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Porfolio",
-  description: "Portfolio website",
+  title: "Portfolio",
+  description: "Dohyeon Lee's Portfolio website",
 };
 
 export default function RootLayout({
